@@ -14,6 +14,7 @@ const Body = () => {
   const [searchRestaurants, setsearchRestaurants] = useState(restaurantList);
   const [searchText, setSearchText] = useState("");
   console.log(searchRestaurants);
+
   return (
     <>
       <div className="search-container">
@@ -51,7 +52,11 @@ const Body = () => {
         <div className="restaurant-list">
           {restaurants.map((restaurant) => {
             return (
-              <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
+              <RestaurantCard
+                data={restaurant.data}
+                {...restaurant.data}
+                key={restaurant.data.id}
+              />
             );
           })}
         </div>
