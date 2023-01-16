@@ -11,10 +11,15 @@ const RestrauntCard = ({
   aggregatedDiscountInfoV2,
   data,
 }) => {
-  console.log(aggregatedDiscountInfoV2.descriptionList[0].meta);
+  //console.log(aggregatedDiscountInfoV2.descriptionList[0].meta);
   return (
     <div className="card">
-      <img src={IMG_CDN_URL + cloudinaryImageId} />
+      <div className="imageCard">
+        <img src={IMG_CDN_URL + cloudinaryImageId} />
+        <div className="ribbon">
+          <div>Promoted</div>
+        </div>
+      </div>
       <div className="cardContent">
         <h2>{name}</h2>
         <div className="foodDesciption">{cuisines.join(", ")}</div>
