@@ -58,27 +58,18 @@ const Body = () => {
           Search
         </button>
       </div>
-      {searchText ? (
-        <div className="restaurant-list">
-          {searchRestaurants.map((restaurant) => {
-            return (
-              <RestaurantCard {...restaurant.data} key={restaurant.data.id} />
-            );
-          })}
-        </div>
-      ) : (
-        <div className="restaurant-list">
-          {restaurants.map((restaurant) => {
-            return (
-              <RestaurantCard
-                data={restaurant.data}
-                {...restaurant.data}
-                key={restaurant.data.id}
-              />
-            );
-          })}
-        </div>
-      )}
+
+      <div className="restaurant-list">
+        {restaurants?.map((restaurant) => {
+          return (
+            <RestaurantCard
+              data={restaurant.data}
+              {...restaurant.data}
+              key={restaurant.data.id}
+            />
+          );
+        })}
+      </div>
     </>
   );
 };
