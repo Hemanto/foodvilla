@@ -11,14 +11,18 @@ const RestrauntCard = ({
   aggregatedDiscountInfoV2,
   data,
 }) => {
-  //console.log(aggregatedDiscountInfoV2.descriptionList[0].meta);
+  //console.log(data.promoted);
   return (
     <div className="card">
       <div className="imageCard">
         <img src={IMG_CDN_URL + cloudinaryImageId} />
-        <div className="ribbon">
-          <div>Promoted</div>
-        </div>
+        {data.promoted ? (
+          <div className="ribbon">
+            <div>Promoted</div>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
       <div className="cardContent">
         <h2>{name}</h2>

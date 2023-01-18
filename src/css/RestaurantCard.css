@@ -1,5 +1,6 @@
 .card {
   margin: 10px;
+  height: 378px;
 }
 .card .imageCard {
   position: relative;
