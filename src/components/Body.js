@@ -11,8 +11,6 @@ function filterData(searchText, restaurants) {
 }
 
 const Body = () => {
-  const numberArray = new Array(15).fill(0);
-
   const [restaurants, setRestaurants] = useState([]);
   const [searchRestaurants, setsearchRestaurants] = useState(restaurantList);
   const [searchText, setSearchText] = useState("");
@@ -30,7 +28,6 @@ const Body = () => {
       );
       const data = await response.json();
       //console.log(data.data);
-      setShimmer(true);
 
       setRestaurants(data?.data?.cards[2]?.data?.data?.cards);
       setShimmer(true);
@@ -79,9 +76,11 @@ const Body = () => {
         </div>
       ) : (
         <div className="restaurant-list">
-          {numberArray.map((itme, index) => (
-            <CardShimer key={index} />
-          ))}
+          {Array(15)
+            .fill(0)
+            .map((itme, index) => (
+              <CardShimer key={index} />
+            ))}
         </div>
       )}
     </>
