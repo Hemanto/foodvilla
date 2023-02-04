@@ -1,0 +1,22 @@
+.container {
+  //background-color: aqua;
+  margin: 12px;
+  width: 800px;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+
+  display: flex;
+  .imgBox {
+    width: 118px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+.mainContainer {
+  display: flex;
+}
